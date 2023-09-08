@@ -34,11 +34,7 @@ function AboutMe() {
             <div className="about">
                 <h3>Skills</h3>
                 <div className="border-bottom border-3 border-primary-subtle" />
-                <ul>
-                    <li>Tidur</li>
-                    <li>Main Mobile Legend</li>
-                    <li>Masak tapi dikit doang</li>
-                </ul>
+                
             </div>
             <div className="about about2">
                 <h3>Experiences</h3>
