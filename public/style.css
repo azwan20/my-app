@@ -369,7 +369,7 @@ a {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 414px) {
     /* Mengatur margin dan padding ulang untuk perangkat mobile */
     .container {
         padding: 7px;
