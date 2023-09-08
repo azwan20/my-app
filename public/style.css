@@ -364,11 +364,17 @@ a {
     }
 }
 
-@media (max-width: 320px) {
-
+@media (max-width: 360px) {
     /* Mengatur margin dan padding ulang untuk perangkat mobile */
     .container {
         padding: 7px;
+    }
+
+    .body-home{
+        background: url("./assets/home-mobile.svg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .container-fluid {
