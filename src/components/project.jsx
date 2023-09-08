@@ -66,13 +66,6 @@ function Project() {
         }
     };
 
-    // const handleClick = () => {
-    //     // Ketika anchor diklik, toggle state showMessage
-    //     // setClicked(anchor);
-    //     setShowMessage(!showMessage);
-    // };
-
-
     return (
         <div className="project">
             <nav class="navbar navbar-expand-lg">
@@ -114,7 +107,7 @@ function Project() {
                                         {showMessage && clicked === 1 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/starbucks", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(2) }} style={color(2)} href="#">Website MSI</a>
+                                        <a onClick={() => { switchImage(2) }} style={color(2)} href="#">Web E-commerce MSI</a>
                                         {showMessage && clicked === 2 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MSI_website", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
@@ -122,8 +115,8 @@ function Project() {
                                         {showMessage && clicked === 3 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/monitoring", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="#">Website MSI</a>
-                                        {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/portofolio", "_blank") }}>Source Code</button>}
+                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="#">Portofolio</a>
+                                        {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MyPortofolio", "_blank") }}>Source Code</button>}
                                     </li>
                                 </ul>
                             </div>
