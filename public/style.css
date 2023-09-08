@@ -370,12 +370,13 @@ a {
 }
 
 @media (max-width: 414px) {
+
     /* Mengatur margin dan padding ulang untuk perangkat mobile */
     .container {
         padding: 7px;
     }
 
-    .body-home{
+    .body-home {
         background: url("./assets/home-mobile.svg");
         background-position: bottom;
         background-repeat: no-repeat;
@@ -457,11 +458,11 @@ a {
     }
 
     .content h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .content p {
-        font-size: 0.5rem;
+        font-size: 1rem;
         width: 50vh;
         text-align: center;
         margin: auto;
@@ -473,10 +474,14 @@ a {
     }
 
     .button-home {
-        width: 2.5rem;
+        width: 4.5rem;
         height: 1.2rem;
-        font-size: 0.4rem;
+        font-size: 0.7rem;
         padding: 0;
+    }
+
+    .button-home:hover{
+        background-color: #FFC700 !important;
     }
 }
 
