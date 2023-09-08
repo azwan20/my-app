@@ -70,7 +70,7 @@ function AboutMe() {
                     </div>
                     <div className="col-md-6 col-sm-col-12 col-lg-4">
                         <div className="contact-item">
-                            <img className="img" src="./assets/instagram.svg" alt="Instagram" />
+                            <img className="img" src="./assets/Instagram.svg" alt="Instagram" />
                             <span>Azwan Triyadi</span>
                         </div>
                     </div>
