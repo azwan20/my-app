@@ -198,10 +198,9 @@ a {
     border: 1px solid black;
 }
 
-.table {
-    margin: auto;
-    border-collapse: collapse;
-    /* width: 100px; */
+.skills-item img{
+    width: 6rem;
+    margin: 10px;
 }
 
 .lanskap {
@@ -240,6 +239,41 @@ a {
     text-decoration: none;
     display: block;
     padding: 1rem;
+}
+
+.experience{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-family: 'Bellefair', serif;
+}
+
+.experience li{
+    padding-bottom: 5px !important;
+}
+
+.experience li b{
+    padding: 0 !important;
+}
+
+.experience ul li{
+    padding: 3px !important;
+}
+
+.experience ol{
+    margin-bottom: 1rem;
+}
+
+.experience ol li{
+    /* list-style-type: circle; */
+    padding: 3px !important;
+    display: block;
+    position: relative;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .border-bottom {
@@ -313,6 +347,10 @@ a {
         font-size: 1rem;
     }
 
+    .about { 
+        padding: 20px;
+    }
+
     .about p {
         font-size: 1rem;
         margin: auto;
@@ -321,6 +359,22 @@ a {
 
     .about ul li {
         font-size: 1rem;
+    }
+
+    .experience ol{
+        padding: 0% !important;
+    }
+
+    .experience ol li{
+        /* list-style-type: circle; */
+        padding: 3px !important;
+        display: block;
+        position: relative;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px !important;
+        text-align: center;
     }
 
     .content h1 {
@@ -452,6 +506,22 @@ a {
     .about h3 {
         margin-bottom: 0%;
         font-size: 20px;
+    }
+
+    .experience ol{
+        padding: 0% !important;
+    }
+
+    .experience ol li{
+        /* list-style-type: circle; */
+        padding: 3px !important;
+        display: block;
+        position: relative;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.6rem !important;
+        text-align: center;
     }
 
     .border-bottom {
