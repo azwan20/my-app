@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function AboutMe() {
     return (
         <div className="aboutMe">
-           <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -34,18 +34,87 @@ function AboutMe() {
             <div className="about">
                 <h3>Skills</h3>
                 <div className="border-bottom border-3 border-primary-subtle" />
-                
+                <div className="row">
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://o.remove.bg/downloads/e4cefcc3-80d5-4d41-a423-ce8710af48e1/unnamed-removebg-preview.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://o.remove.bg/downloads/33fd3b6c-be3e-4d6f-980a-0d90758d2e3e/CI-removebg-preview.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://academy.alterra.id/blog/wp-content/uploads/2021/07/Logo-Javascript.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://seeklogo.com/images/1/3ds-max-logo-4C228D4A3D-seeklogo.com.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://static.vecteezy.com/system/resources/previews/022/100/816/original/microsoft-logo-transparent-free-png.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-lg-4">
+                        <div className="skills-item">
+                            <img className="img" src="https://aety.io/wp-content/uploads/2016/11/mysql-logo.png" alt="WhatsApp" />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="about about2">
+            <div className="about about2 ">
                 <h3>Experiences</h3>
                 <div className="border-bottom border-3 border-primary-subtle" />
-                <ul>
+                <ul className="experience">
+                    <li><b>2021-2023</b></li>
                     <li>Assistent Laboratory at Computer Science faculty of the Universitas Muslim Indonesia</li>
+                    <ol>
+                        <li>Bertanggung jawab mengajarkan praktikum kepada mahasiswa</li>
+                        <li>Melakukan perakitan dan perbaikan PC yang baru maupun yg rusak</li>
+                        <li>Membuat kabel LAN untuk digunakan teknisi</li>
+                    </ol>
+                    <li><b>2022</b></li>
                     <li>Microsoft Certified Fundamental (MCF)</li>
-                    <li>2021 - Diklat BDI Denpasar 3D Aset</li>
-                    <li>2019 - Lomba Cerpen Tingkat Nasional</li>
-                    <li>2017 - Lomba Kepalang Merahan Se-Sulawesi Selatan</li>
-                    <li>2016 - Lomba Teratai Chapter X</li>
+                    <li><b>2021</b></li>
+                    <li>Diklat BDI Denpasar 3D Aset</li>
+                    <ol>
+                        <li>Membuat desain 3D untuk asset bangunan</li>
+                        <li>Membuat desain 3D bangunan/rumah</li>
+                        <li>Membuat desain 3D kendaraan mobil</li>
+                    </ol>
+                    <li><b>2019</b></li>
+                    <li>Lomba Cerpen Tingkat Nasional</li>
+                    <li><b>2018</b></li>
+                    <li>Volunteer PMR untuk korban Gempa & Tsunami Palu</li>
+                    <ol>
+                        <li>Mengumpulkan bantuan dari masyarakat kota Enrekang</li>
+                        <li>Mengumpulkan bantuan ke rumah jabatan Bupati Enrekang</li>
+                        <li>Mendata dan menyiampkan bantuan untuk siap kirim ke Palu</li>
+                    </ol>
+                    <li><b>2017</b></li>
+                    <li>Lomba Kepalang Merahan Se-Sulawesi Selatan</li>
+                    <li><b>2016</b></li>
+                    <li>Lomba Teratai Chapter X</li>
                 </ul>
             </div>
             <div className="about">
@@ -66,7 +135,7 @@ function AboutMe() {
                     </div>
                     <div className="col-md-6 col-sm-col-12 col-lg-4">
                         <div className="contact-item">
-                            <img className="img" src="./assets/Instagram.svg" alt="Instagram" />
+                            <img className="img" src="./assets/instagram.svg" alt="Instagram" />
                             <span>Azwan Triyadi</span>
                         </div>
                     </div>
