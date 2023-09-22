@@ -198,7 +198,7 @@ a {
     border: 1px solid black;
 }
 
-.skills-item img{
+.skills-item img {
     width: 6rem;
     margin: 10px;
 }
@@ -242,30 +242,31 @@ a {
     padding: 1rem;
 }
 
-.experience{
+.experience {
     text-align: center;
     color: #FFFFFF;
     font-size: 1.5rem;
     font-family: 'Bellefair', serif;
 }
 
-.experience li{
+.experience li {
     padding-bottom: 5px !important;
 }
 
-.experience li b{
+.experience li b {
     padding: 0 !important;
 }
 
-.experience ul li{
+.experience ul li {
     padding: 3px !important;
 }
 
-.experience ol{
+.experience ol {
     margin-bottom: 1rem;
+    counter-reset: my-counter !important; /* Menginisialisasi counter CSS */
 }
 
-.experience ol li{
+.experience ol li {
     /* list-style-type: circle; */
     padding: 3px !important;
     display: block;
@@ -275,31 +276,39 @@ a {
     justify-content: center;
     font-size: 1.2rem;
     text-align: center;
+    counter-increment: my-counter; /* Increment counter setiap kali elemen <li> muncul */
 }
-.education{
+
+.experience ol li::before {
+    content: counter(my-counter) ".";
+    padding-right: 8px;
+  }
+
+.education {
     text-align: center;
     color: #FFFFFF;
     font-size: 1.5rem;
     font-family: 'Bellefair', serif;
 }
 
-.education li{
+.education li {
     padding-bottom: 5px !important;
 }
 
-.education li b{
+.education li b {
     padding: 0 !important;
 }
 
-.education ul li{
+.education ul li {
     padding: 3px !important;
 }
 
-.education ol{
+.education ol {
     margin-bottom: 1rem;
+    counter-reset: my-counter !important; /* Menginisialisasi counter CSS */
 }
 
-.education ol li{
+.education ol li {
     /* list-style-type: circle; */
     padding: 3px !important;
     display: block;
@@ -309,7 +318,13 @@ a {
     justify-content: center;
     font-size: 1.2rem;
     text-align: center;
+    counter-increment: my-counter; /* Increment counter setiap kali elemen <li> muncul */
 }
+
+.education ol li::before {
+    content: counter(my-counter) ".";
+    padding-right: 8px;
+  }
 
 .border-bottom {
     width: 20%;
@@ -318,7 +333,7 @@ a {
     /* border-width: 4px; */
 }
 
-.contact-item a{
+.contact-item a {
     text-decoration: none;
     text-decoration-style: none;
     color: #FFFFFF;
@@ -333,7 +348,56 @@ a {
     padding-right: 10px;
 }
 
+@media (max-width: 834px) {
+
+    .project {
+        background: url("./assets/project-tablet.svg");
+        background-position: bottom;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+        background-size: cover;
+    }
+
+    .card {
+        width: 90% !important;
+    }
+
+    .card-body {
+        margin-top: 1rem !important;
+        margin-left: 0 !important;
+    }
+
+    .card-title {
+        font-size: 1.3rem !important;
+        padding-bottom: 0px !important;
+    }
+
+    .card-body ul {
+        padding-left: 3px;
+    }
+
+    .card-body button {
+        font-size: 12px !important;
+    }
+
+    .contact-item {
+        text-align: center;
+        padding: 1rem 0 !important;
+        font-size: 1.5rem;
+    }
+
+    .education {
+        font-size: 2rem;
+    }
+
+    .education ol li {
+        font-size: 22px !important;
+        margin: auto !important;
+    }
+
+}
+
 @media (max-width: 767px) {
+
     /* Mengatur margin dan padding ulang untuk perangkat mobile */
     .container {
         padding: 10px;
@@ -352,24 +416,25 @@ a {
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
         background-size: cover;
     }
-    
-    .card{
-    width: 90% !important;
+
+    .card {
+        width: 90% !important;
     }
-    .card-body{
+
+    .card-body {
         margin-top: 1rem !important;
     }
 
-    .card-title{
+    .card-title {
         font-size: 1.3rem !important;
         padding-bottom: 0px !important;
     }
 
-    .card-body ul{
+    .card-body ul {
         padding-left: 3px;
     }
 
-    .card-body button{
+    .card-body button {
         font-size: 12px !important;
     }
 
@@ -387,7 +452,7 @@ a {
         font-size: 1rem;
     }
 
-    .about { 
+    .about {
         padding: 20px;
     }
 
@@ -401,11 +466,11 @@ a {
         font-size: 1rem;
     }
 
-    .experience ol{
+    .experience ol {
         padding: 0% !important;
     }
 
-    .experience ol li{
+    .experience ol li {
         /* list-style-type: circle; */
         padding: 3px !important;
         display: block;
@@ -498,20 +563,20 @@ a {
         background-size: cover;
     }
 
-    .card-body{
+    .card-body {
         margin-top: 1rem !important;
     }
 
-    .card-title{
+    .card-title {
         font-size: 1.3rem !important;
         padding-bottom: 0px !important;
     }
 
-    .card-body ul{
+    .card-body ul {
         padding-left: 3px;
     }
 
-    .card-body button{
+    .card-body button {
         font-size: 12px !important;
     }
 
@@ -548,11 +613,11 @@ a {
         font-size: 20px;
     }
 
-    .experience ol{
+    .experience ol {
         padding: 0% !important;
     }
 
-    .experience ol li{
+    .experience ol li {
         /* list-style-type: circle; */
         padding: 3px !important;
         display: block;
@@ -564,13 +629,21 @@ a {
         text-align: center;
     }
 
-    .education ol{
+    .education{
+        padding: 1rem;
+    }
+
+    .education li{
+        margin-top: 0% !important;
+    }
+
+    .education ol {
         padding: 0% !important;
     }
 
-    .education ol li{
+    .education ol li {
         /* list-style-type: circle; */
-        padding: 3px !important;
+        padding: 3px 5px !important;
         display: block;
         position: relative;
         margin: auto;
@@ -599,7 +672,7 @@ a {
         width: 2rem;
     }
 
-    .skills-item img{
+    .skills-item img {
         width: 4rem;
         margin: 10px;
     }
@@ -649,7 +722,7 @@ a {
         padding: 0;
     }
 
-    .button-home:hover{
+    .button-home:hover {
         background-color: #FFC700 !important;
     }
 }
