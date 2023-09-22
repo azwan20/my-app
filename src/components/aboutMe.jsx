@@ -89,16 +89,15 @@ function AboutMe() {
                     <li><b>Februari 2021 - Agustus 2023</b></li>
                     <li>Assistent Laboratory at Computer Science faculty of the Universitas Muslim Indonesia</li>
                     <ol>
-                        <li>Bertanggung jawab mengajarkan praktikum kepada mahasiswa</li>
-                        <li>Melakukan perakitan dan perbaikan PC yang baru maupun yg rusak</li>
-                        <li>Membuat kabel LAN untuk digunakan teknisi</li>
+                        <li>Responsibilities included instructing practical courses, assigning coursework, evaluating student performance, and administering examinations</li>
+                        <li>Managing inventory, including the cataloging of new and used items, as well as assessing the condition of goods to ensure integrity and suitability within warehouse facilities</li>
+                        <li>Proficient in assembling new PCs, replacing faulty components, and conducting repairs on malfunctioning personal computers</li>
+                        <li>Proficient in fabricating LAN cables for fellow associates, used in computer networking, CCTV systems, and server rooms.</li>
                     </ol>
                     <li><b>Juni - Juli 2021</b></li>
                     <li>Diklat BDI Denpasar 3D Aset</li>
                     <ol>
-                        <li>Membuat desain 3D untuk asset bangunan</li>
-                        <li>Membuat desain 3D bangunan/rumah</li>
-                        <li>Membuat desain 3D kendaraan mobil</li>
+                        <li>Proficient in creating 3 dimensional designs for architectural structures, interior spaces, and automotive models using 3D modeling software such as 3ds Max.</li>
                     </ol>
                     <li><b>November 2019</b></li>
                     <li>Himpunan Pelajar Mahasiswa Massenrempulu (HPMM)</li>
@@ -107,9 +106,7 @@ function AboutMe() {
                     <li><b>September 2018</b></li>
                     <li>Volunteer PMR untuk korban Gempa & Tsunami Palu</li>
                     <ol>
-                        <li>Mengumpulkan bantuan dari masyarakat kota Enrekang</li>
-                        <li>Mengumpulkan bantuan ke rumah jabatan Bupati Enrekang</li>
-                        <li>Mendata dan menyiampkan bantuan untuk siap kirim ke Palu</li>
+                        <li>Coordinated community outreach efforts in Enrekang city, including the collection, organization, and documentation of relief donations for the Office of the Regent in Enrekang. Managed inventory and facilitated the dispatch of goods to Palu, Central Sulawesi.</li>
                     </ol>
                     <li><b>2017</b></li>
                     <li>Lomba Kepalang Merahan Se-Sulawesi Selatan</li>
@@ -125,7 +122,7 @@ function AboutMe() {
                     <li>S1 Teknik Informatika Universitas Muslim Indonesia</li>
                     <ol>
                         <li>Judul tugas akhir : Analisis Sentiment Publik Mengenai Neuralink dengan Menerapkan Naive Bayes: Multinmial, Gaussian, Complement</li>
-                        <li> IPK : 3.85</li>
+                        <li>IPK : 3.85</li>
                     </ol>
                     <br />
                     <li><b>Oktober 2022</b></li>
@@ -166,7 +163,7 @@ function AboutMe() {
                             <a href="https://github.com/azwan20" target="_blank">Azwan20</a>
                         </div>
                     </div>
-                    <div className="col-md-6 col-sm-col-12 col-lg-6">
+                    <div className="col-md-12 col-sm-col-12 col-lg-6">
                         <div className="contact-item add" style={{ padding: '2rem 9rem 0 0' }}>
                             <img className="img" src="./assets/LinkedIn.svg" alt="Instagram" />
                             <a href="https://www.linkedin.com/in/azwan-triyadi-185494256/" target="_blank">Azwan Triyadi</a>
