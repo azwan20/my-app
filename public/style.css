@@ -686,8 +686,8 @@ a {
             width: 313px;
             border-radius: 25px;
             position: absolute;
-            left: 2%;
-            right: 2%;
+            left: 3%;
+            right: 3%;
             top: 35%;
             bottom: 40%;
         }
@@ -696,7 +696,7 @@ a {
             position: relative;
             right: 4%;
             left: 1%;
-            top: 40%;
+            top: 55%;
             bottom: 40%;
             text-align: center;
             color: #FFFFFF;
@@ -705,7 +705,7 @@ a {
         .lansFoot {
             position: relative;
             left: 10%;
-            top: 40%;
+            top: 60%;
             margin-top: 3rem;
             width: 90%;
             color: #FFFFFF;
