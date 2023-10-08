@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function AboutMe() {
     return (
         <div className="aboutMe">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg" style={{ position: 'absolute', width: '100%' }}>
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,17 @@ function AboutMe() {
                     </div>
                 </div>
             </nav>
-            <div className="lanskap"></div>
+            <div className="lanskap">
+                    <img className="lanskap-img" src="./assets/forLanskap.jpeg" alt="Bostrap" />
+                    <div className="lansHead">
+                        <h1 style={{ color: "#9079F1", fontFamily: 'Jomolhari, serif' }}>Hello There!</h1>
+                        <h4>Azwan Here</h4>
+                    </div>
+                    <div className="lansFoot">
+                        <h4>I'm A Web Developer</h4>
+                        <p>I am a web developer mainly focusing on the front end web developer field and I am also open to new experiences in other fields.</p>
+                    </div>
+            </div>
             <div className="about about2">
                 <h3>About Me</h3>
                 <div className="border-bottom border-3 border-primary-subtle" />
@@ -42,7 +52,7 @@ function AboutMe() {
                     </div>
                     <div className="col-md-6 col-sm-12 col-lg-4">
                         <div className="skills-item">
-                            <img className="img" src="https://o.remove.bg/downloads/934702f2-e304-4712-9604-e6346bb7c273/174854-removebg-preview.png" alt="HTML" />
+                            <img className="img" src="https://o.remove.bg/downloads/a0568bdb-f418-4fbd-874d-76b005f0c61d/174854-removebg-preview.png" alt="HTML" />
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-12 col-lg-4">
