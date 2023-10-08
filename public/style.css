@@ -685,7 +685,7 @@ a {
             height: 208px;
             width: 313px;
             border-radius: 25px;
-            position: relative;
+            position: absolute;
             left: 2%;
             right: 2%;
             top: 35%;
@@ -707,7 +707,7 @@ a {
             left: 10%;
             top: 40%;
             margin-top: 3rem;
-            width: 311px;
+            width: 90%;
             color: #FFFFFF;
         }
 
