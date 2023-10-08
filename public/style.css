@@ -147,13 +147,23 @@ a {
     width: 15vh;
 }
 
-.btn:hover {
-    background-color: #9ec5feff;
+.nav-item .btn:hover {
+    background-color: #483285ff !important;
+    border-radius: 4px;
+    padding: 12px 24px;
+    /* Atau warna latar belakang kuning yang Anda inginkan */
 }
 
 .nav-link {
     color: #FFFFFF !important;
     justify-content: center;
+}
+
+.nav-link:hover {
+    background-color: #483285ff;
+    border-radius: 4px;
+    padding: 12px 24px;
+    /* Atau warna latar belakang kuning yang Anda inginkan */
 }
 
 .button-nav {
@@ -204,14 +214,46 @@ a {
 }
 
 .lanskap {
-    height: 50vh;
-    background-color: #2C1E59;
-    /* margin-top: 1rem; */
+    height: 640px;
+    /* height: 100vh; */
+    width: 100%;
+    /* background-color: #fff; */
+    background-image: -webkit-linear-gradient(-65deg, #483285 50%, #2C1E59 50%);
+}
+
+.lanskap img {
+    height: 352px;
+    width: 529px;
+    border-radius: 25px;
+    position: absolute;
+    margin: auto;
+    margin-left: 1.5rem;
+    top: 60%;
+    bottom: 40%;
+}
+
+.lansHead {
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.lansFoot {
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    margin-top: 3rem;
+    width: 611px;
+    color: #FFFFFF;
 }
 
 .aboutMe {
     /* background: none !important; */
     background-color: #483285;
+    /* display: flex; */
+    /* flex-direction: row; */
 }
 
 .about {
@@ -263,7 +305,8 @@ a {
 
 .experience ol {
     margin-bottom: 1rem;
-    counter-reset: my-counter !important; /* Menginisialisasi counter CSS */
+    counter-reset: my-counter !important;
+    /* Menginisialisasi counter CSS */
 }
 
 .experience ol li {
@@ -276,13 +319,14 @@ a {
     justify-content: center;
     font-size: 1.2rem;
     text-align: center;
-    counter-increment: my-counter; /* Increment counter setiap kali elemen <li> muncul */
+    counter-increment: my-counter;
+    /* Increment counter setiap kali elemen <li> muncul */
 }
 
 .experience ol li::before {
     content: counter(my-counter) ".";
     padding-right: 8px;
-  }
+}
 
 .education {
     text-align: center;
@@ -305,7 +349,8 @@ a {
 
 .education ol {
     margin-bottom: 1rem;
-    counter-reset: my-counter !important; /* Menginisialisasi counter CSS */
+    counter-reset: my-counter !important;
+    /* Menginisialisasi counter CSS */
 }
 
 .education ol li {
@@ -318,13 +363,14 @@ a {
     justify-content: center;
     font-size: 1.2rem;
     text-align: center;
-    counter-increment: my-counter; /* Increment counter setiap kali elemen <li> muncul */
+    counter-increment: my-counter;
+    /* Increment counter setiap kali elemen <li> muncul */
 }
 
 .education ol li::before {
     content: counter(my-counter) ".";
     padding-right: 8px;
-  }
+}
 
 .border-bottom {
     width: 20%;
@@ -349,12 +395,45 @@ a {
 }
 
 @media (max-width: 834px) {
-
     .project {
         background: url("./assets/project-tablet.svg");
         background-position: bottom;
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
         background-size: cover;
+    }
+
+    .lanskap {
+        height: 1194px;
+        width: 100%;
+        background-image: -webkit-linear-gradient(-65deg, #483285 50%, #2C1E59 50%);
+    }
+
+    .lanskap img {
+        height: 352px;
+        width: 529px;
+        border-radius: 25px;
+        position: relative;
+        left: 15%;
+        right: 15%;
+        top: 25%;
+    }
+
+    .lansHead {
+        position: absolute;
+        right: 20%;
+        left: 20%;
+        top: 67%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .lansFoot {
+        position: absolute;
+        left: 17%;
+        bottom: 7%;
+        margin-top: 3rem;
+        width: 611px;
+        color: #FFFFFF;
     }
 
     .card {
@@ -393,414 +472,483 @@ a {
         font-size: 22px !important;
         margin: auto !important;
     }
-
 }
 
-@media (max-width: 767px) {
+    @media (max-width: 767px) {
 
-    /* Mengatur margin dan padding ulang untuk perangkat mobile */
-    .container {
-        padding: 10px;
-    }
+        /* Mengatur margin dan padding ulang untuk perangkat mobile */
+        .container {
+            padding: 10px;
+        }
 
-    .body-home {
-        background: url("./assets/home-tablet.svg");
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+        .body-home {
+            background: url("./assets/home-tablet.svg");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-    .project {
-        background: url("./assets/project-tablet.svg");
-        background-position: bottom;
-        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-        background-size: cover;
-    }
+        .lanskap {
+            height: 1194px;
+            width: 100%;
+            background-image: -webkit-linear-gradient(-65deg, #483285 50%, #2C1E59 50%);
+        }
+    
+        .lanskap img {
+            height: 352px;
+            width: 529px;
+            border-radius: 25px;
+            position: relative;
+            left: 15%;
+            right: 15%;
+            top: 25%;
+        }
+    
+        .lansHead {
+            position: absolute;
+            right: 20%;
+            left: 20%;
+            top: 67%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    
+        .lansFoot {
+            position: absolute;
+            left: 17%;
+            bottom: 7%;
+            margin-top: 3rem;
+            width: 611px;
+            color: #FFFFFF;
+        }
 
-    .card {
-        width: 90% !important;
-    }
+        .project {
+            background: url("./assets/project-tablet.svg");
+            background-position: bottom;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-size: cover;
+        }
 
-    .card-body {
-        margin-top: 1rem !important;
-    }
+        .card {
+            width: 90% !important;
+        }
 
-    .card-title {
-        font-size: 1.3rem !important;
-        padding-bottom: 0px !important;
-    }
+        .card-body {
+            margin-top: 1rem !important;
+        }
 
-    .card-body ul {
-        padding-left: 3px;
-    }
+        .card-title {
+            font-size: 1.3rem !important;
+            padding-bottom: 0px !important;
+        }
 
-    .card-body button {
-        font-size: 12px !important;
-    }
+        .card-body ul {
+            padding-left: 3px;
+        }
 
-    h3 {
-        font-size: 24px;
-    }
+        .card-body button {
+            font-size: 12px !important;
+        }
 
-    p {
-        font-size: 16px;
-    }
+        h3 {
+            font-size: 24px;
+        }
 
-    .contact-item {
-        text-align: center;
-        padding: 1.5rem 0 !important;
-        font-size: 1rem;
-    }
+        p {
+            font-size: 16px;
+        }
 
-    .about {
-        padding: 20px;
-    }
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem 0 !important;
+            font-size: 1rem;
+        }
 
-    .about p {
-        font-size: 1rem;
-        margin: auto;
-        width: 90%;
-    }
+        .about {
+            padding: 20px;
+        }
 
-    .about ul li {
-        font-size: 1rem;
-    }
+        .about p {
+            font-size: 1rem;
+            margin: auto;
+            width: 90%;
+        }
 
-    .experience ol {
-        padding: 0% !important;
-    }
+        .about ul li {
+            font-size: 1rem;
+        }
 
-    .experience ol li {
-        /* list-style-type: circle; */
-        padding: 3px !important;
-        display: block;
-        position: relative;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px !important;
-        text-align: center;
-    }
+        .experience ol {
+            padding: 0% !important;
+        }
 
-    .content h1 {
-        font-size: 4rem;
-    }
+        .experience ol li {
+            /* list-style-type: circle; */
+            padding: 3px !important;
+            display: block;
+            position: relative;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px !important;
+            text-align: center;
+        }
 
-    .content p {
-        font-size: 1rem;
-    }
+        .content h1 {
+            font-size: 4rem;
+        }
 
-    .link ul li {
-        margin: 5rem;
-    }
+        .content p {
+            font-size: 1rem;
+        }
 
-    .button-home {
-        width: 5rem;
-        height: 2.5rem;
-        font-size: 0.7rem;
-        padding: 0;
-    }
+        .link ul li {
+            margin: 5rem;
+        }
 
-    .project {
-        background-size: cover;
-    }
+        .button-home {
+            width: 5rem;
+            height: 2.5rem;
+            font-size: 0.7rem;
+            padding: 0;
+        }
 
-    .project .card {
-        width: 80% !important;
-        /* height: 20vh; */
-    }
+        .project {
+            background-size: cover;
+        }
 
-    .card-title {
-        font-size: 1.3rem;
-        padding-bottom: 8px !important;
-    }
+        .project .card {
+            width: 80% !important;
+            /* height: 20vh; */
+        }
 
-    .card-head img {
-        width: 100%;
-    }
+        .card-title {
+            font-size: 1.3rem;
+            padding-bottom: 8px !important;
+        }
 
-    .card-body {
-        width: 100%;
-        /* padding: 0 !important;
+        .card-head img {
+            width: 100%;
+        }
+
+        .card-body {
+            width: 100%;
+            /* padding: 0 !important;
         margin: 0 !important; */
-        margin-left: 0 !important;
-        padding: 5px !important;
+            margin-left: 0 !important;
+            padding: 5px !important;
+        }
+
+        .card-body ul li {
+            font-size: 1rem;
+            /* font-weight: 10px; */
+            padding: auto 0;
+            margin: 10px auto;
+        }
+
+        .card-body ul li button {
+            font-size: 1rem;
+            /* font-weight: 1rem; */
+            padding: auto 0;
+            width: 5rem;
+        }
     }
 
-    .card-body ul li {
-        font-size: 1rem;
-        /* font-weight: 10px; */
-        padding: auto 0;
-        margin: 10px auto;
+    @media (max-width: 414px) {
+
+        /* Mengatur margin dan padding ulang untuk perangkat mobile */
+        .container {
+            padding: 7px;
+        }
+
+        .body-home {
+            background: url("./assets/home-mobile.svg");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .project {
+            background: url("./assets/project-mobile.svg");
+            background-position: bottom;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-size: cover;
+        }
+
+        .lanskap {
+            height: 812px;
+            width: 100%;
+            background-image: -webkit-linear-gradient(-45deg, #483285 50%, #2C1E59 50%);
+        }
+    
+        .lanskap img {
+            height: 208px;
+            width: 313px;
+            border-radius: 25px;
+            position: relative;
+            left: 2%;
+            right: 2%;
+            top: 35%;
+            bottom: 40%;
+        }
+    
+        .lansHead {
+            position: relative;
+            right: 4%;
+            left: 1%;
+            top: 40%;
+            bottom: 40%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    
+        .lansFoot {
+            position: relative;
+            left: 10%;
+            top: 40%;
+            margin-top: 3rem;
+            width: 311px;
+            color: #FFFFFF;
+        }
+
+        .card-body {
+            margin-top: 1rem !important;
+        }
+
+        .card-title {
+            font-size: 1.3rem !important;
+            padding-bottom: 0px !important;
+        }
+
+        .card-body ul {
+            padding-left: 3px;
+        }
+
+        .card-body button {
+            font-size: 12px !important;
+        }
+
+        .container-fluid {
+            width: fit-content;
+        }
+
+        .navbar-toggler {
+            width: fit-content;
+        }
+
+        .navb {
+            width: fit-content;
+        }
+
+        .nav-item {
+            padding: 0;
+        }
+
+        .navbar-nav {
+            margin: auto;
+        }
+
+        .navbar-brand {
+            padding: 0;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .about h3 {
+            margin-bottom: 0%;
+            font-size: 20px;
+        }
+
+        .experience ol {
+            padding: 0% !important;
+        }
+
+        .experience ol li {
+            /* list-style-type: circle; */
+            padding: 3px !important;
+            display: block;
+            position: relative;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem !important;
+            text-align: center;
+        }
+
+        .education {
+            padding: 1rem;
+        }
+
+        .education li {
+            margin-top: 0% !important;
+        }
+
+        .education ol {
+            padding: 0% !important;
+        }
+
+        .education ol li {
+            /* list-style-type: circle; */
+            padding: 3px 5px !important;
+            display: block;
+            position: relative;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem !important;
+            text-align: center;
+        }
+
+        .border-bottom {
+            margin-bottom: 1rem;
+            width: 30%;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 0.5rem 0 !important;
+            font-size: 12px;
+        }
+
+        .contact-item img {
+            width: 2rem;
+        }
+
+        .skills-item img {
+            width: 4rem;
+            margin: 10px;
+        }
+
+        .about {
+            padding: 1rem 10px;
+        }
+
+        .about .row {
+            padding-right: 0;
+            margin: 0;
+        }
+
+        .about p {
+            font-size: 12px;
+        }
+
+        .about ul li {
+            font-size: 12px;
+            padding: 10px;
+        }
+
+        .about ul {
+            padding: 0;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+        }
+
+        .content p {
+            font-size: 1rem;
+            width: 50vh;
+            text-align: center;
+            margin: auto;
+        }
+
+        .link ul li {
+            margin: 0.5rem;
+            display: block;
+        }
+
+        .button-home {
+            width: 4.5rem;
+            height: 1.2rem;
+            font-size: 0.7rem;
+            padding: 0;
+        }
+
+        .button-home:hover {
+            background-color: #FFC700 !important;
+        }
     }
 
-    .card-body ul li button {
-        font-size: 1rem;
-        /* font-weight: 1rem; */
-        padding: auto 0;
-        width: 5rem;
-    }
-}
-
-@media (max-width: 414px) {
-
-    /* Mengatur margin dan padding ulang untuk perangkat mobile */
-    .container {
-        padding: 7px;
+    .data {
+        border: 1px solid black;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .body-home {
-        background: url("./assets/home-mobile.svg");
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+
+    .proyek {
+        background-color: #d84e17;
+        /* display: flex; */
+        justify-content: center;
+        margin: 50vh 0;
+        margin-top: 10px;
     }
 
-    .project {
-        background: url("./assets/project-mobile.svg");
-        background-position: bottom;
-        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-        background-size: cover;
+    .biodata {
+        /* border: 1px solid black; */
+        margin: auto;
+        background-color: aliceblue;
+    }
+
+
+    .oke {
+        height: 90vh;
+        /* margin: 1rem; */
+        /* background-color: #d84e17; */
+    }
+
+    .card img {
+        max-width: 100%;
+        /* Membuat gambar responsif */
+        border-radius: 10px;
+        /* Membuat gambar sesuai aspek rasio */
     }
 
     .card-body {
-        margin-top: 1rem !important;
+        margin-left: 1rem;
+        border-radius: 10px;
+        background-color: #2C1E59;
+        border: 2px solid #2C1E59;
+        font-family: 'Bellefair', serif;
     }
 
-    .card-title {
-        font-size: 1.3rem !important;
-        padding-bottom: 0px !important;
+    .card-body li {
+        text-decoration: none;
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        text-decoration: none;
     }
 
     .card-body ul {
-        padding-left: 3px;
-    }
-
-    .card-body button {
-        font-size: 12px !important;
-    }
-
-    .container-fluid {
-        width: fit-content;
-    }
-
-    .navbar-toggler {
-        width: fit-content;
-    }
-
-    .navb {
-        width: fit-content;
-    }
-
-    .nav-item {
-        padding: 0;
-    }
-
-    .navbar-nav {
         margin: auto;
+        text-decoration: none;
     }
 
-    .navbar-brand {
-        padding: 0;
-    }
-
-    h3 {
-        font-size: 24px;
-    }
-
-    .about h3 {
-        margin-bottom: 0%;
-        font-size: 20px;
-    }
-
-    .experience ol {
-        padding: 0% !important;
-    }
-
-    .experience ol li {
-        /* list-style-type: circle; */
-        padding: 3px !important;
+    .card-body ul button {
         display: block;
-        position: relative;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.6rem !important;
-        text-align: center;
-    }
-
-    .education{
-        padding: 1rem;
-    }
-
-    .education li{
-        margin-top: 0% !important;
-    }
-
-    .education ol {
-        padding: 0% !important;
-    }
-
-    .education ol li {
-        /* list-style-type: circle; */
-        padding: 3px 5px !important;
-        display: block;
-        position: relative;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.6rem !important;
-        text-align: center;
-    }
-
-    .border-bottom {
-        margin-bottom: 1rem;
-        width: 30%;
-    }
-
-    p {
-        font-size: 12px;
-    }
-
-    .contact-item {
-        text-align: center;
-        padding: 0.5rem 0 !important;
-        font-size: 12px;
-    }
-
-    .contact-item img {
-        width: 2rem;
-    }
-
-    .skills-item img {
-        width: 4rem;
-        margin: 10px;
-    }
-
-    .about {
-        padding: 1rem 10px;
-    }
-
-    .about .row {
-        padding-right: 0;
-        margin: 0;
-    }
-
-    .about p {
-        font-size: 12px;
-    }
-
-    .about ul li {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .about ul {
-        padding: 0;
-    }
-
-    .content h1 {
-        font-size: 3rem;
-    }
-
-    .content p {
+        width: 7rem;
+        height: 2rem;
         font-size: 1rem;
-        width: 50vh;
+        color: black;
+    }
+
+    .card-body a {
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+    .card-body h5 {
         text-align: center;
-        margin: auto;
+        padding-bottom: 1.5rem;
+        font-size: 1.8rem;
+        color: #FFFFFF;
     }
-
-    .link ul li {
-        margin: 0.5rem;
-        display: block;
-    }
-
-    .button-home {
-        width: 4.5rem;
-        height: 1.2rem;
-        font-size: 0.7rem;
-        padding: 0;
-    }
-
-    .button-home:hover {
-        background-color: #FFC700 !important;
-    }
-}
-
-.data {
-    border: 1px solid black;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.proyek {
-    background-color: #d84e17;
-    /* display: flex; */
-    justify-content: center;
-    margin: 50vh 0;
-    margin-top: 10px;
-}
-
-.biodata {
-    /* border: 1px solid black; */
-    margin: auto;
-    background-color: aliceblue;
-}
-
-
-.oke {
-    height: 90vh;
-    /* margin: 1rem; */
-    /* background-color: #d84e17; */
-}
-
-.card img {
-    max-width: 100%;
-    /* Membuat gambar responsif */
-    border-radius: 10px;
-    /* Membuat gambar sesuai aspek rasio */
-}
-
-.card-body {
-    margin-left: 1rem;
-    border-radius: 10px;
-    background-color: #2C1E59;
-    border: 2px solid #2C1E59;
-    font-family: 'Bellefair', serif;
-}
-
-.card-body li {
-    text-decoration: none;
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.card-body ul {
-    margin: auto;
-    text-decoration: none;
-}
-
-.card-body ul button {
-    display: block;
-    width: 7rem;
-    height: 2rem;
-    font-size: 1rem;
-    color: black;
-}
-
-.card-body a {
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.card-body h5 {
-    text-align: center;
-    padding-bottom: 1.5rem;
-    font-size: 1.8rem;
-    color: #FFFFFF;
-}
