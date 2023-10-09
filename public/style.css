@@ -688,7 +688,7 @@ a {
             position: absolute;
             left: 10%;
             right: 10%;
-            top: 35%;
+            top: 45%;
             /* bottom: 40%; */
         }
     
@@ -696,7 +696,7 @@ a {
             position: absolute;
             right: 4%;
             left: 1%;
-            top: 70%;
+            top: 75%;
             /* bottom: 40%; */
             text-align: center;
             color: #FFFFFF;
@@ -705,7 +705,7 @@ a {
         .lansFoot {
             position: absolute;
             left: 7%;
-            top: 80%;
+            top: 90%;
             margin-top: 3rem;
             width: 90%;
             color: #FFFFFF;
