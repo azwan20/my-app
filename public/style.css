@@ -685,7 +685,7 @@ a {
             height: 173px;
             width: 260px;
             border-radius: 25px;
-            position: realtive;
+            position: absolute;
             left: 10%;
             right: 10%;
             top: 35%;
