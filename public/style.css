@@ -682,21 +682,21 @@ a {
         }
     
         .lanskap img {
-            height: 208px;
-            width: 313px;
+            height: 173px;
+            width: 260px;
             border-radius: 25px;
-            position: absolute;
-            left: 3%;
-            right: 3%;
+            position: relative;
+            left: 10%;
+            right: 10%;
             top: 35%;
-            bottom: 40%;
+            /* bottom: 40%; */
         }
     
         .lansHead {
             position: relative;
             right: 4%;
             left: 1%;
-            top: 55%;
+            top: 45%;
             bottom: 40%;
             text-align: center;
             color: #FFFFFF;
@@ -704,8 +704,8 @@ a {
     
         .lansFoot {
             position: relative;
-            left: 10%;
-            top: 60%;
+            left: 7%;
+            top: 50%;
             margin-top: 3rem;
             width: 90%;
             color: #FFFFFF;
