@@ -151,8 +151,8 @@ function AboutMe() {
                 <div className="row">
                     <div className="col-md-6 col-sm-12 col-lg-4">
                         <div className="contact-item">
-                            <img className="img" src="./assets/WhatsApp.svg" alt="WhatsApp" />
-                            <a href="" target="_blank">+6282246377149</a>
+                            <a href="https://wa.me/+6282246377149" target="_blank">
+                            <img className="img" src="./assets/WhatsApp.svg" alt="WhatsApp" />+6282246377149</a>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-12 col-lg-4">
@@ -163,20 +163,20 @@ function AboutMe() {
                     </div>
                     <div className="col-md-6 col-sm-col-12 col-lg-4">
                         <div className="contact-item">
-                            <img className="img" src="./assets/instagram.svg" alt="Instagram" />
-                            <a href="https://www.instagram.com/azwantrydi/" target="_blank">Azwan Triyadi</a>
+                            <a href="https://www.instagram.com/azwantrydi/" target="_blank">
+                            <img className="img" src="./assets/instagram.svg" alt="Instagram" /> Azwan Triyadi</a>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-col-12 col-lg-6 ">
                         <div className="contact-item add" style={{ padding: '2rem 0 0 8rem' }}>
-                            <img className="img" src="./assets/gitHub.svg" alt="Instagram" />
-                            <a href="https://github.com/azwan20" target="_blank">Azwan20</a>
+                            <a href="https://github.com/azwan20" target="_blank">
+                            <img className="img" src="./assets/gitHub.svg" alt="Instagram" />Azwan20</a>
                         </div>
                     </div>
                     <div className="col-md-12 col-sm-col-12 col-lg-6">
                         <div className="contact-item add" style={{ padding: '2rem 9rem 0 0' }}>
-                            <img className="img" src="./assets/LinkedIn.svg" alt="Instagram" />
-                            <a href="https://www.linkedin.com/in/azwan-triyadi-185494256/" target="_blank">Azwan Triyadi</a>
+                            <a href="https://www.linkedin.com/in/azwan-triyadi-185494256/" target="_blank">
+                            <img className="img" src="./assets/LinkedIn.svg" alt="Instagram" />Azwan Triyadi</a>
                         </div>
                     </div>
                 </div>
