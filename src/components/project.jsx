@@ -20,6 +20,7 @@ function Project() {
 
     // State untuk melacak indeks gambar saat ini
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    
 
     // Fungsi untuk mengganti gambar pada imageNumber === 1
     const switchImageNumber1 = () => {
@@ -47,22 +48,23 @@ function Project() {
         } else if (imageNumber === 3) {
             setCurrentImage('./assets/monitoring.png');
             setClicked(3);
+        } else if (imageNumber === 4) {
+            setCurrentImage('./assets/ezprog.png');
+            setClicked(4);
+        } else if (imageNumber === 5) {
+            setCurrentImage('./assets/project.png');
+            setClicked(5);
         } else {
             setCurrentImage(null); // Hapus gambar jika nomor tidak valid
             setClicked(null);
         }
+
         setShowMessage(!showMessage);
     };
-
-    // const setAnchorClik= (anchor) => {
-    //     setClicked(anchor);
-    //     setShowMessage(!showMessage);
-    // }
 
     const color = (imageNumber) => {
         return {
             color: clicked === imageNumber ? "#E0CF35" : "white",
-
         }
     };
 
@@ -93,12 +95,12 @@ function Project() {
             <div className="container container-project d-flex align-items-center justify-content-center" style={{ height: "100vh" }} >
                 <div class="card mb-3" style={{ maxWidth: '100%', height: 'auto', backgroundColor: 'transparent', border: 'none' }}>
                     <div class="row g-0 d-flex align-items-center justify-content-center card-front">
-                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
                             {currentImage && (
                                 <img className="img-fluid" src={currentImage} alt="Displayed Image" />
                             )}
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12 col-lg-6">
                             <div class="card-body">
                                 <h5 class="card-title">Nama Proyek</h5>
                                 <ul>
@@ -115,8 +117,12 @@ function Project() {
                                         {showMessage && clicked === 3 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/monitoring", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="#">Portofolio</a>
-                                        {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MyPortofolio", "_blank") }}>Source Code</button>}
+                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="#">EZprog (using Next.js)</a>
+                                        {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/ez-prog", "_blank") }}>Source Code</button>}
+                                    </li>
+                                    <li>
+                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="#">Web Portofolio (using React.Js)</a>
+                                        {showMessage && clicked === 5 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MyPortofolio", "_blank") }}>Source Code</button>}
                                     </li>
                                 </ul>
                             </div>
