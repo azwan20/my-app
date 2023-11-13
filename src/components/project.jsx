@@ -117,7 +117,7 @@ function Project() {
                                         {showMessage && clicked === 3 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/monitoring", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="#">EZprog (using Next.js)</a>
+                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="https://ez-prog.vercel.app/" target="_blank">EZprog (using Next.js)</a>
                                         {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/ez-prog", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
