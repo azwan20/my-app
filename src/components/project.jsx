@@ -43,16 +43,16 @@ function Project() {
             setCurrentImage(imagesForImageNumber1[0]);
             setClicked(1);
         } else if (imageNumber === 2) {
-            setCurrentImage('./assets/msi.png');
+            setCurrentImage('./assets/ezprog.png');
             setClicked(2);
         } else if (imageNumber === 3) {
-            setCurrentImage('./assets/monitoring.png');
+            setCurrentImage('./assets/project.png');
             setClicked(3);
         } else if (imageNumber === 4) {
-            setCurrentImage('./assets/ezprog.png');
+            setCurrentImage('./assets/msi.png');
             setClicked(4);
         } else if (imageNumber === 5) {
-            setCurrentImage('./assets/project.png');
+            setCurrentImage('./assets/monitoring.png');
             setClicked(5);
         } else {
             setCurrentImage(null); // Hapus gambar jika nomor tidak valid
@@ -109,20 +109,20 @@ function Project() {
                                         {showMessage && clicked === 1 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/starbucks", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(2) }} style={color(2)} href="#">Web E-commerce MSI</a>
-                                        {showMessage && clicked === 2 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MSI_website", "_blank") }}>Source Code</button>}
+                                        <a onClick={() => { switchImage(2) }} style={color(2)} href="https://ez-prog.vercel.app/" target="_blank">EZprog (using Next.js)</a>
+                                        {showMessage && clicked === 2 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/ez-prog", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(3) }} style={color(3)} href="#">Monitoring FIKOM UMI</a>
-                                        {showMessage && clicked === 3 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/monitoring", "_blank") }}>Source Code</button>}
+                                        <a onClick={() => { switchImage(3) }} style={color(3)} href="#">Web Portofolio (using React.Js)</a>
+                                        {showMessage && clicked === 3 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MyPortofolio", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="https://ez-prog.vercel.app/" target="_blank">EZprog (using Next.js)</a>
-                                        {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/ez-prog", "_blank") }}>Source Code</button>}
+                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="#">Online Shop MSI</a>
+                                        {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MSI_website", "_blank") }}>Source Code</button>}
                                     </li>
                                     <li>
-                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="#">Web Portofolio (using React.Js)</a>
-                                        {showMessage && clicked === 5 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MyPortofolio", "_blank") }}>Source Code</button>}
+                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="#">Monitoring FIKOM UMI</a>
+                                        {showMessage && clicked === 5 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/monitoring", "_blank") }}>Source Code</button>}
                                     </li>
                                 </ul>
                             </div>
@@ -131,7 +131,6 @@ function Project() {
                 </div>
             </div>
         </div>
-
     );
 }
 
