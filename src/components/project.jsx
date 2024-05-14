@@ -5,61 +5,102 @@ import Home from "./home";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Project() {
-    // Gunakan state untuk melacak gambar yang harus ditampilkan
-    const [currentImage, setCurrentImage] = useState("./assets/starbucks.png");
+    const [currentImage, setCurrentImage] = useState("");
     const [showMessage, setShowMessage] = useState(false);
     const [clicked, setClicked] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState(null);
 
-    // Daftar gambar yang akan digunakan pada imageNumber === 1
-    const imagesForImageNumber1 = [
-        "./assets/starbucks.png",
-        "./assets/starbucks2.png",
-        "./assets/starbucks3.png",
-        "./assets/starbucks4.png",
+    const projectData = [
+        {
+            id: 1,
+            name: "Clone the Starbucks Indonesia website application",
+            category: "Web Developer",
+            imageUrl: "./assets/starbucks.png",
+            sourceCodeLink: "",
+        },
+        {
+            id: 2,
+            name: "EZprog (using Next.js)",
+            category: ["Front-End Developer", "Landing Pages"],
+            imageUrl: "./assets/ezprog.png",
+            sourceCodeLink: "https://ez-prog.vercel.app/"
+        },
+        {
+            id: 3,
+            name: "Web Portofolio (using React.Js)",
+            category: "Front-End Developer",
+            imageUrl: "./assets/project.png",
+            sourceCodeLink: "https://github.com/azwan20/MyPortofolio"
+        },
+        {
+            id: 4,
+            name: "Online Shop MSI",
+            category: "Web Developer",
+            imageUrl: "./assets/msi.png",
+            sourceCodeLink: "https://github.com/azwan20/MSI_website"
+        },
+        {
+            id: 5,
+            name: "Monitoring FIKOM UMI",
+            category: "Web Developer",
+            imageUrl: "./assets/monitoring.png",
+            sourceCodeLink: "https://github.com/azwan20/monitoring"
+        },
+        {
+            id: 6,
+            name: "Landing Page Online Shop",
+            category: "Landing Pages",
+            imageUrl: "./assets/onlineShopLP.png",
+            sourceCodeLink: "https://ez-prog-fashion-shop.vercel.app/"
+        },
+        {
+            id: 7,
+            name: "Landing Page Produk UMKM",
+            category: "Landing Pages",
+            imageUrl: "./assets/umkmLP.png",
+            sourceCodeLink: "https://rioslku.vercel.app/"
+        },
+        {
+            id: 8,
+            name: "Toko Kelontong Online",
+            category: "Landing Pages",
+            imageUrl: "./assets/kelontong.png",
+            sourceCodeLink: "https://nur-afiah-mart.vercel.app/"
+        },
+        {
+            id: 9,
+            name: "Digitalisasi Kantor Desa",
+            category: "Landing Pages",
+            imageUrl: "./assets/kantor.png",
+            sourceCodeLink: "https://kantordesapao.vercel.app/"
+        }
     ];
 
-    // State untuk melacak indeks gambar saat ini
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    useEffect(() => {
+        // Ketika komponen pertama kali dirender, atur konten awal sesuai dengan id: 1
+        const initialProject = projectData.find(project => project.id === 1);
+        setCurrentImage(initialProject.imageUrl);
+        setClicked(initialProject.id);
+        setShowMessage(true);
+
+        // Ketika komponen pertama kali dirender, atur kategori yang dipilih menjadi "Landing Pages"
+        setSelectedCategory("Landing Pages");
+    }, []); // Tambahkan array kosong sebagai dependencies agar useEffect hanya dijalankan sekali saat komponen pertama kali dirender    
+
+    const switchImage = (imageNumber, imageUrl, sourceCodeLink) => {
+        setCurrentImage(imageUrl);
+        setClicked(imageNumber);
+        setShowMessage(true);
+    
+        // Tampilkan alert jika sourceCodeLink tidak ada
+        if (!sourceCodeLink) {
+            alert('App ini tidak terdeploy');
+        }
+    };
     
 
-    // Fungsi untuk mengganti gambar pada imageNumber === 1
-    const switchImageNumber1 = () => {
-        const newIndex = (currentImageIndex + 1) % imagesForImageNumber1.length;
-        setCurrentImage(imagesForImageNumber1[newIndex]);
-        setCurrentImageIndex(newIndex);
-    };
-
-    useEffect(() => {
-        // Mulai interval hanya jika imageNumber === 1 dan ada lebih dari satu gambar
-        if (clicked === 1 && imagesForImageNumber1.length > 1) {
-            const interval = setInterval(switchImageNumber1, 2000); // Ganti gambar setiap 2 detik (sesuaikan dengan kebutuhan Anda)
-            return () => clearInterval(interval); // Hentikan interval ketika komponen dibersihkan
-        }
-    }, [clicked, currentImageIndex]);
-
-    // Fungsi untuk mengganti gambar berdasarkan nomor yang diberikan
-    const switchImage = (imageNumber) => {
-        if (imageNumber === 1) {
-            setCurrentImage(imagesForImageNumber1[0]);
-            setClicked(1);
-        } else if (imageNumber === 2) {
-            setCurrentImage('./assets/ezprog.png');
-            setClicked(2);
-        } else if (imageNumber === 3) {
-            setCurrentImage('./assets/project.png');
-            setClicked(3);
-        } else if (imageNumber === 4) {
-            setCurrentImage('./assets/msi.png');
-            setClicked(4);
-        } else if (imageNumber === 5) {
-            setCurrentImage('./assets/monitoring.png');
-            setClicked(5);
-        } else {
-            setCurrentImage(null); // Hapus gambar jika nomor tidak valid
-            setClicked(null);
-        }
-
-        setShowMessage(!showMessage);
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
     };
 
     const color = (imageNumber) => {
@@ -67,6 +108,7 @@ function Project() {
             color: clicked === imageNumber ? "#E0CF35" : "white",
         }
     };
+
 
     return (
         <div className="project">
@@ -76,7 +118,7 @@ function Project() {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse navb" id="navbarTogglerDemo01">
-                        <a class="navbar-brand font-weight-bold" href="#">Azwan Triyadi</a>
+                        <Link className="navbar-brand font-weight-bold" href="#">Azwan Triyadi</Link>
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active font-weight-bold btn" role="button" aria-current="page" href="#">Project</a>
@@ -92,6 +134,12 @@ function Project() {
                 </div>
             </nav>
 
+            <div className="buttons">
+                <button onClick={() => handleCategoryClick("Landing Pages")}>Landing Pages</button>
+                <button onClick={() => handleCategoryClick("Web Developer")}>Web Developer</button>
+                <button onClick={() => handleCategoryClick("Front-End Developer")}>Front-End Developer</button>
+            </div>
+
             <div className="container container-project d-flex align-items-center justify-content-center" style={{ height: "100vh" }} >
                 <div class="card mb-3" style={{ maxWidth: '100%', height: 'auto', backgroundColor: 'transparent', border: 'none' }}>
                     <div class="row g-0 d-flex align-items-center justify-content-center card-front">
@@ -104,7 +152,7 @@ function Project() {
                             <div class="card-body">
                                 <h5 class="card-title">Nama Proyek</h5>
                                 <ul>
-                                    <li>
+                                    {/* <li>
                                         <a onClick={() => { switchImage(1) }} style={color(1)} href="#">Clone the Starbucks Indonesia website application</a>
                                         {showMessage && clicked === 1 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/starbucks", "_blank") }}>Source Code</button>}
                                     </li>
@@ -124,6 +172,29 @@ function Project() {
                                         <a onClick={() => { switchImage(5) }} style={color(5)} href="#">Monitoring FIKOM UMI</a>
                                         {showMessage && clicked === 5 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/monitoring", "_blank") }}>Source Code</button>}
                                     </li>
+                                    <li>
+                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://ezapp-landing.web.app/" target="_blank">Landing Page Online Shop</a>
+                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
+                                    </li>
+                                    <li>
+                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://rioslku.vercel.app/" target="_blank">Landing Page Produk UMKM</a>
+                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
+                                    </li>
+                                    <li>
+                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://nur-afiah-mart.vercel.app/" target="_blank">Toko Kelontong Online</a>
+                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
+                                    </li>
+                                    <li>
+                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://kantordesapao.vercel.app/" target="_blank">Digitalisasi Kantor Desa</a>
+                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
+                                    </li> */}
+
+                                    {projectData.filter(item => selectedCategory ? item.category.includes(selectedCategory) : true).map((item, index) => (
+                                        <li key={index}>
+                                        <Link onClick={() => switchImage(item.id, item.imageUrl, item.sourceCodeLink)} style={color(item.id)} href="#">{item.name}</Link>
+                                            {showMessage && clicked === item.id && <button className="bg-light" onClick={() => switchImage(item.id, item.imageUrl, item.sourceCodeLink)}>Lihat Website</button>}
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
