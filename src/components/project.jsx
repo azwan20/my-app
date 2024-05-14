@@ -150,7 +150,7 @@ function Project() {
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="card-body">
-                                <h5 class="card-title">Nama Proyek</h5>
+                                <h5 class="card-title">Proyek {selectedCategory}</h5>
                                 <ul>
                                     {/* <li>
                                         <a onClick={() => { switchImage(1) }} style={color(1)} href="#">Clone the Starbucks Indonesia website application</a>
