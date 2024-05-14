@@ -37,14 +37,14 @@ function Project() {
             name: "Online Shop MSI",
             category: ["Front-End Developer", "Landing Pages"],
             imageUrl: "./assets/msi.png",
-            sourceCodeLink: "https://github.com/azwan20/MSI_website"
+            sourceCodeLink: ""
         },
         {
             id: 5,
             name: "Monitoring FIKOM UMI",
             category: ["Front-End Developer", "Landing Pages"],
             imageUrl: "./assets/monitoring.png",
-            sourceCodeLink: "https://github.com/azwan20/monitoring"
+            sourceCodeLink: ""
         },
         {
             id: 6,
