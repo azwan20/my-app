@@ -14,7 +14,7 @@ function Project() {
         {
             id: 1,
             name: "Clone the Starbucks Indonesia website application",
-            category: "Web Developer",
+            category: ["Front-End Developer", "Landing Pages"],
             imageUrl: "./assets/starbucks.png",
             sourceCodeLink: "",
         },
@@ -28,21 +28,21 @@ function Project() {
         {
             id: 3,
             name: "Web Portofolio (using React.Js)",
-            category: "Front-End Developer",
+            category: ["Front-End Developer", "Landing Pages"],
             imageUrl: "./assets/project.png",
             sourceCodeLink: "https://github.com/azwan20/MyPortofolio"
         },
         {
             id: 4,
             name: "Online Shop MSI",
-            category: "Web Developer",
+            category: ["Front-End Developer", "Landing Pages"],
             imageUrl: "./assets/msi.png",
             sourceCodeLink: "https://github.com/azwan20/MSI_website"
         },
         {
             id: 5,
             name: "Monitoring FIKOM UMI",
-            category: "Web Developer",
+            category: ["Front-End Developer", "Landing Pages"],
             imageUrl: "./assets/monitoring.png",
             sourceCodeLink: "https://github.com/azwan20/monitoring"
         },
@@ -63,14 +63,14 @@ function Project() {
         {
             id: 8,
             name: "Toko Kelontong Online",
-            category: "Landing Pages",
+            category: "Web Developer",
             imageUrl: "./assets/kelontong.png",
             sourceCodeLink: "https://nur-afiah-mart.vercel.app/"
         },
         {
             id: 9,
             name: "Digitalisasi Kantor Desa",
-            category: "Landing Pages",
+            category: "Web Developer",
             imageUrl: "./assets/kantor.png",
             sourceCodeLink: "https://kantordesapao.vercel.app/"
         }
