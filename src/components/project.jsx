@@ -192,7 +192,7 @@ function Project() {
                                     {projectData.filter(item => selectedCategory ? item.category.includes(selectedCategory) : true).map((item, index) => (
                                         <li key={index}>
                                         <Link onClick={() => switchImage(item.id, item.imageUrl, item.sourceCodeLink)} style={color(item.id)} href="#">{item.name}</Link>
-                                            {showMessage && clicked === item.id && <button className="bg-light" onClick={() => switchImage(item.id, item.imageUrl, item.sourceCodeLink)}>Lihat Website</button>}
+                                                                                {showMessage && clicked === item.id && item.sourceCodeLink && <button className="bg-light" onClick={() => window.open(item.sourceCodeLink, "_blank")}>Lihat Website</button>}
                                         </li>
                                     ))}
                                 </ul>
