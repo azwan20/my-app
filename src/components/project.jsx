@@ -73,6 +73,20 @@ function Project() {
             category: "Web Developer",
             imageUrl: "./assets/kantor.png",
             sourceCodeLink: "https://kantordesapao.vercel.app/"
+        },
+        {
+            id: 10,
+            name: "Wedding Invitation (Non WordPress)",
+            category: "Front-End Developer",
+            imageUrl: "./assets/wedding-invitation.png",
+            sourceCodeLink: "https://wedding-invitation-henna.vercel.app/"
+        },
+        {
+            id: 11,
+            name: "RestoTa App",
+            category: "Front-End Developer",
+            imageUrl: "./assets/restoTa.jpeg",
+            sourceCodeLink: ""
         }
     ];
 
@@ -152,43 +166,6 @@ function Project() {
                             <div class="card-body">
                                 <h5 class="card-title">Proyek {selectedCategory}</h5>
                                 <ul>
-                                    {/* <li>
-                                        <a onClick={() => { switchImage(1) }} style={color(1)} href="#">Clone the Starbucks Indonesia website application</a>
-                                        {showMessage && clicked === 1 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/starbucks", "_blank") }}>Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(2) }} style={color(2)} href="https://ez-prog.vercel.app/" target="_blank">EZprog (using Next.js)</a>
-                                        {showMessage && clicked === 2 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/ez-prog", "_blank") }}>Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(3) }} style={color(3)} href="#">Web Portofolio (using React.Js)</a>
-                                        {showMessage && clicked === 3 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MyPortofolio", "_blank") }}>Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(4) }} style={color(4)} href="#">Online Shop MSI</a>
-                                        {showMessage && clicked === 4 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/MSI_website", "_blank") }}>Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="#">Monitoring FIKOM UMI</a>
-                                        {showMessage && clicked === 5 && <button className="bg-light" onClick={() => { window.open("https://github.com/azwan20/monitoring", "_blank") }}>Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://ezapp-landing.web.app/" target="_blank">Landing Page Online Shop</a>
-                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://rioslku.vercel.app/" target="_blank">Landing Page Produk UMKM</a>
-                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://nur-afiah-mart.vercel.app/" target="_blank">Toko Kelontong Online</a>
-                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
-                                    </li>
-                                    <li>
-                                        <a onClick={() => { switchImage(5) }} style={color(5)} href="https://kantordesapao.vercel.app/" target="_blank">Digitalisasi Kantor Desa</a>
-                                        {showMessage && clicked === 5 && <button className="bg-light">Source Code</button>}
-                                    </li> */}
-
                                     {projectData.filter(item => selectedCategory ? item.category.includes(selectedCategory) : true).map((item, index) => (
                                         <li key={index}>
                                         <Link onClick={() => switchImage(item.id, item.imageUrl, item.sourceCodeLink)} style={color(item.id)} href="#">{item.name}</Link>
