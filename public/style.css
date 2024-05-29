@@ -93,7 +93,7 @@ a {
     margin: auto;
 }
 
-.project {
+.project, .detail {
     /* background: linear-gradient(90deg, #DBE8F3, #d4d6f3ff, #FFFFFF); */
     background-image: url("./assets/project3.svg");
     background-repeat: no-repeat;
@@ -215,7 +215,7 @@ a {
 
 .lanskap {
     height: 640px;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
     /* background-color: #fff; */
     background-image: -webkit-linear-gradient(-65deg, #483285 50%, #2C1E59 50%);
@@ -407,6 +407,43 @@ a {
     padding: 5px 10px;
     border: 3px solid #2C1E59;
     background-color: #fff;
+}
+
+.detail{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: #231C3B !important;
+}
+
+.detail .deskrip{
+    width: 80%;
+    height: fit-content;
+    background-color: #2C1E59;
+    margin: 50px 0;
+    padding: 40px 20px;
+    border-radius: 20px;
+    opacity: 85%;
+}
+
+.detail .deskrip span{
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.detail .deskrip p{
+    width: 40%;
+    text-align: start;
+    opacity: 100%;
+}
+
+.deskrip b{
+    width: 60%;
+}
+
+.detail ul{
+    padding-left: 10px;
 }
 
 @media (max-width: 834px) {

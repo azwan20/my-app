@@ -87,7 +87,35 @@ function Project() {
             category: "Front-End Developer",
             imageUrl: "./assets/restoTa.jpeg",
             sourceCodeLink: ""
-        }
+        },
+        {
+            id: 12,
+            name: "App Input Nilai Mahasiswa",
+            category: "Web Developer",
+            imageUrl: "./assets/nilaiMhs.png",
+            sourceCodeLink: "https://nilai-matakuliah-fikom-umi.vercel.app/",
+        },
+        {
+            id: 13,
+            name: "Bank Sampah Simple App",
+            category: "Web Developer",
+            imageUrl: "./assets/bankSampah.png",
+            sourceCodeLink: "https://bank-sampah-lemon.vercel.app/",
+        },
+        {
+            id: 14,
+            name: "Pengelolaan Kuliah Admin App",
+            category: "Web Developer",
+            imageUrl: "./assets/kuliahAdmin.png",
+            sourceCodeLink: "https://admin-kampus.vercel.app/",
+        },
+        {
+            id: 15,
+            name: "Pendaftaran Siswa Baru TK Admin App",
+            category: "Web Developer",
+            imageUrl: "./assets/pendaftaranSiswa.png",
+            sourceCodeLink: "https://tk-tuntas-talenta-tanjung-tobaku.vercel.app/",
+        },
     ];
 
     useEffect(() => {
@@ -105,13 +133,12 @@ function Project() {
         setCurrentImage(imageUrl);
         setClicked(imageNumber);
         setShowMessage(true);
-    
+
         // Tampilkan alert jika sourceCodeLink tidak ada
         if (!sourceCodeLink) {
             alert('App ini tidak terdeploy');
         }
     };
-    
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
@@ -122,6 +149,13 @@ function Project() {
             color: clicked === imageNumber ? "#E0CF35" : "white",
         }
     };
+
+    // const handleDetailTransaksi = (id) => {
+    //     router.push(`/print/${id}`);
+    // };
+
+
+    console.log(projectData[0].id);
 
 
     return (
@@ -150,7 +184,7 @@ function Project() {
 
             <div className="buttons">
                 <button onClick={() => handleCategoryClick("Landing Pages")}>Landing Pages</button>
-                <button onClick={() => handleCategoryClick("Web Developer")}>Web Developer</button>
+                <button onClick={() => handleCategoryClick("Web Developer")}>Full-Stack Web</button>
                 <button onClick={() => handleCategoryClick("Front-End Developer")}>Front-End Developer</button>
             </div>
 
@@ -168,8 +202,11 @@ function Project() {
                                 <ul>
                                     {projectData.filter(item => selectedCategory ? item.category.includes(selectedCategory) : true).map((item, index) => (
                                         <li key={index}>
-                                        <Link onClick={() => switchImage(item.id, item.imageUrl, item.sourceCodeLink)} style={color(item.id)} href="#">{item.name}</Link>
-                                                                                {showMessage && clicked === item.id && item.sourceCodeLink && <button className="bg-light" onClick={() => window.open(item.sourceCodeLink, "_blank")}>Lihat Website</button>}
+                                            <Link onClick={() => switchImage(item.id, item.imageUrl, item.sourceCodeLink)} style={color(item.id)} href="#">{item.name}</Link>
+                                            {showMessage && clicked === item.id && item.sourceCodeLink && <button className="bg-light" onClick={() => window.open(item.sourceCodeLink, "_blank")}>Lihat Website</button>}
+                                            {/* <Link hrefLang="/{id}">
+                                                <button onClick={item.id}>Lihat detail</button>
+                                            </Link> */}
                                         </li>
                                     ))}
                                 </ul>
